@@ -15,19 +15,9 @@
       background: #000; /* Black background */
     }
 
-    /* Quote banner */
-    .quote-banner {
-      background-color: #111;
-      color: #fff;
-      text-align: center;
-      padding: 15px 20px;
-      font-style: italic;
-      font-size: 1.1em;
-    }
-
     header {
       position: fixed;
-      top: 50px; /* leave space for quote banner */
+      top: 0;
       width: 100%;
       background: #111; /* dark header */
       border-bottom: 1px solid #444;
@@ -50,13 +40,13 @@
       font-weight: 500;
     }
 
-    nav a:hover { color: #1a73e8; } /* light blue on hover */
+    nav a:hover { color: #1a73e8; }
 
     section {
       max-width: 960px;
       margin: auto;
-      padding: 110px 20px 70px;
-      color: #fff; /* section text white */
+      padding: 140px 20px 70px;
+      color: #fff; 
     }
 
     h1, h2 { color: #fff; }
@@ -75,25 +65,39 @@
     a { color: #1a73e8; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* Profile picture on right */
+    /* Profile picture on right and larger */
     .profile-pic {
       float: right;
-      margin-left: 20px; /* spacing from text */
-      width: 120px;
+      margin-left: 30px;
+      width: 200px; /* enlarged */
       border-radius: 50%;
-      border: 2px solid #fff;
+      border: 3px solid #fff;
     }
 
-    /* Subtitle with background image */
+    /* Subtitle section with large background image and quote on top */
     .subtitle-bg {
+      position: relative;
       color: #fff;
-      font-size: 1.1em;
+      font-size: 1.4em;
       margin-bottom: 25px;
-      padding: 20px;
+      padding: 100px 20px; /* more padding to show more image */
       background-image: url('cover_page_polymer.jpg'); /* replace with your image */
       background-size: cover;
       background-position: center;
       border-radius: 8px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Quote text on top of background image */
+    .subtitle-bg .quote {
+      font-style: italic;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      max-width: 90%;
     }
 
     /* Clear floats in About section */
@@ -102,15 +106,23 @@
       display: table;
       clear: both;
     }
+
+    /* Responsive adjustments */
+    @media(max-width: 768px){
+      .profile-pic {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        width: 150px;
+      }
+      .subtitle-bg {
+        padding: 60px 20px;
+      }
+    }
   </style>
 </head>
 
 <body>
-
-<!-- Quote banner -->
-<div class="quote-banner">
-  <p>"It's supposed to be hard. If it wasn't hard, everyone would do it. The hard is what makes it great," —A League of Their Own</p>
-</div>
 
 <header>
   <nav>
@@ -129,8 +141,11 @@
   <!-- Profile picture on right -->
   <img src="profile.png" alt="Tibo Duran" class="profile-pic">
 
-  <!-- Subtitle with background image -->
+  <!-- Subtitle with background image and quote -->
   <div class="subtitle-bg">
+    <div class="quote">
+      "It's supposed to be hard. If it wasn't hard, everyone would do it. The hard is what makes it great," —A League of Their Own
+    </div>
     Assistant Professor in AI/Machine learning and Molecular modeling
   </div>
 
