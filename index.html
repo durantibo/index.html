@@ -65,32 +65,34 @@
     a { color: #1a73e8; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* Hero section with background image and quote next to it */
+    /* Hero section with left-aligned full background image */
     .hero {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
       width: 100%;
-      min-height: 400px;
+      min-height: 450px;
       background-image: url('cover_page_polymer.jpg'); /* replace with your image */
-      background-size: contain; /* show entire image */
+      background-size: contain; /* show full image */
       background-repeat: no-repeat;
-      background-position: center 60%; /* move image down slightly */
+      background-position: left 70%; /* move image down more */
       padding: 20px;
       margin-bottom: 50px;
     }
 
+    /* Quote on right, no overlap */
     .hero .quote-container {
-      margin-left: 50%;
-      max-width: 45%;
-      padding: 10px 20px;
+      margin-left: 55%; /* keeps quote away from image */
+      max-width: 40%;
+      padding: 15px 20px;
       background: rgba(0,0,0,0.5);
       border-radius: 8px;
       font-style: italic;
       font-size: 1.2em;
+      color: #fff;
     }
 
-    /* About section with profile next to paragraph */
+    /* About section with profile picture next to paragraph */
     .about-content {
       display: flex;
       align-items: flex-start;
@@ -113,7 +115,6 @@
     @media(max-width: 768px){
       .hero {
         flex-direction: column;
-        align-items: center;
         min-height: 300px;
         background-size: cover;
         background-position: center center;
@@ -135,6 +136,7 @@
         text-align: center;
       }
     }
+
   </style>
 </head>
 
@@ -153,7 +155,7 @@
   </nav>
 </header>
 
-<!-- Hero section: background image with quote next to it -->
+<!-- Hero section: left-aligned background image, quote on right -->
 <section class="hero">
   <div class="quote-container">
     "It's supposed to be hard. If it wasn't hard, everyone would do it. The hard is what makes it great," —A League of Their Own
