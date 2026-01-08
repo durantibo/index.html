@@ -10,15 +10,15 @@
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
       margin: 0;
-      color: #222;
+      color: #fff; /* White text */
       line-height: 1.65;
-      background: #fff;
+      background: #000; /* Black background */
     }
 
     /* Quote banner */
     .quote-banner {
-      background-color: black;
-      color: white;
+      background-color: #111;
+      color: #fff;
       text-align: center;
       padding: 15px 20px;
       font-style: italic;
@@ -27,10 +27,10 @@
 
     header {
       position: fixed;
-      top: 50px; /* adjust to account for quote banner height */
+      top: 50px; /* leave space for quote banner */
       width: 100%;
-      background: white;
-      border-bottom: 1px solid #eaeaea;
+      background: #111; /* dark header */
+      border-bottom: 1px solid #444;
       z-index: 1000;
     }
 
@@ -46,29 +46,31 @@
     nav a {
       margin-left: 22px;
       text-decoration: none;
-      color: #333;
+      color: #fff; /* links white */
       font-weight: 500;
     }
 
-    nav a:hover { color: #000; }
+    nav a:hover { color: #1a73e8; } /* light blue on hover */
 
     section {
       max-width: 960px;
       margin: auto;
       padding: 110px 20px 70px;
+      color: #fff; /* section text white */
     }
 
-    h1 { font-size: 2.4em; font-weight: 500; margin-bottom: 5px; }
-    h2 { font-weight: 500; margin-bottom: 15px; }
-    .subtitle { color: #555; font-size: 1.1em; margin-bottom: 25px; }
+    h1, h2 { color: #fff; }
+    .subtitle { color: #ccc; font-size: 1.1em; margin-bottom: 25px; }
     ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
 
     footer {
       text-align: center;
       padding: 40px;
       font-size: 0.9em;
-      color: #777;
-      border-top: 1px solid #eee;
+      color: #aaa;
+      border-top: 1px solid #444;
+      background: #111;
     }
 
     a { color: #1a73e8; text-decoration: none; }
@@ -79,6 +81,7 @@
       margin-right: 20px;
       width: 120px;
       border-radius: 50%;
+      border: 2px solid #fff; /* optional white border */
     }
 
     /* Clear floats in About section */
