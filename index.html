@@ -65,18 +65,32 @@
     a { color: #1a73e8; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* Background image above About section */
-    .background-image {
+    /* Hero section with background image and quote next to it */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       width: 100%;
-      height: 400px;
+      min-height: 400px;
       background-image: url('cover_page_polymer.jpg'); /* replace with your image */
-      background-size: contain; /* shows entire image */
+      background-size: contain; /* show entire image */
       background-repeat: no-repeat;
-      background-position: center 40%; /* move image down slightly */
-      margin-bottom: 50px; /* spacing before About section */
+      background-position: center 60%; /* move image down slightly */
+      padding: 20px;
+      margin-bottom: 50px;
     }
 
-    /* About section with profile next to first paragraph */
+    .hero .quote-container {
+      margin-left: 50%;
+      max-width: 45%;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 8px;
+      font-style: italic;
+      font-size: 1.2em;
+    }
+
+    /* About section with profile next to paragraph */
     .about-content {
       display: flex;
       align-items: flex-start;
@@ -97,6 +111,19 @@
     }
 
     @media(max-width: 768px){
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        min-height: 300px;
+        background-size: cover;
+        background-position: center center;
+      }
+      .hero .quote-container {
+        margin-left: 0;
+        max-width: 90%;
+        text-align: center;
+        margin-top: 20px;
+      }
       .about-content {
         flex-direction: column;
         align-items: center;
@@ -106,10 +133,6 @@
       }
       .about-content p {
         text-align: center;
-      }
-      .background-image {
-        height: 300px;
-        background-position: center center;
       }
     }
   </style>
@@ -130,15 +153,17 @@
   </nav>
 </header>
 
-<!-- Background image -->
-<div class="background-image"></div>
+<!-- Hero section: background image with quote next to it -->
+<section class="hero">
+  <div class="quote-container">
+    "It's supposed to be hard. If it wasn't hard, everyone would do it. The hard is what makes it great," —A League of Their Own
+  </div>
+</section>
 
-<!-- About section with profile next to first paragraph -->
+<!-- About section with profile picture next to first paragraph -->
 <section id="about">
   <div class="about-content">
     <p>
-      "It's supposed to be hard. If it wasn't hard, everyone would do it. The hard is what makes it great," —A League of Their Own
-      <br><br>
       I am a faculty member in the Department of Microbiology and Plant Pathology at University of California Riverside.
       My research integrates artificial intelligence, machine learning (AI/ML), and nano-scale molecular modeling 
       to investigate disease mechanisms and advance bioinformatics analyses. 
