@@ -45,7 +45,7 @@
     section {
       max-width: 960px;
       margin: auto;
-      padding: 70px 20px 70px;
+      padding: 50px 20px 70px; /* reduced top padding */
       color: #fff; 
     }
 
@@ -71,18 +71,21 @@
       align-items: flex-start;
       justify-content: flex-start;
       width: 100%;
-      min-height: 450px;
+      min-height: 400px; /* smaller height so closer to About */
       background-image: url('cover_page_polymer.jpg'); /* replace with your image */
-      background-size: contain; /* show full image */
+      background-size: contain; 
       background-repeat: no-repeat;
-      background-position: left 70%; /* move image down more */
+      background-position: left 80%; /* move image further down */
       padding: 20px;
-      margin-bottom: 50px;
+      margin-bottom: 30px; /* reduced margin to About section */
+      position: relative;
     }
 
-    /* Quote on right, no overlap */
+    /* Quote on right, moved down */
     .hero .quote-container {
-      margin-left: 55%; /* keeps quote away from image */
+      position: absolute;
+      right: 5%;
+      top: 60%; /* moved quote lower */
       max-width: 40%;
       padding: 15px 20px;
       background: rgba(0,0,0,0.5);
@@ -120,10 +123,10 @@
         background-position: center center;
       }
       .hero .quote-container {
-        margin-left: 0;
+        position: static;
+        margin-top: 20px;
         max-width: 90%;
         text-align: center;
-        margin-top: 20px;
       }
       .about-content {
         flex-direction: column;
