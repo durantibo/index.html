@@ -60,7 +60,6 @@
     }
 
     h1, h2 { color: #fff; }
-    .subtitle { color: #ccc; font-size: 1.1em; margin-bottom: 25px; }
     ul { padding-left: 20px; }
     li { margin-bottom: 8px; }
 
@@ -76,12 +75,25 @@
     a { color: #1a73e8; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* Profile picture on right */
     .profile-pic {
-      float: left;
-      margin-right: 20px;
+      float: right;
+      margin-left: 20px; /* spacing from text */
       width: 120px;
       border-radius: 50%;
-      border: 2px solid #fff; /* optional white border */
+      border: 2px solid #fff;
+    }
+
+    /* Subtitle with background image */
+    .subtitle-bg {
+      color: #fff;
+      font-size: 1.1em;
+      margin-bottom: 25px;
+      padding: 20px;
+      background-image: url('background.jpg'); /* replace with your image */
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
     }
 
     /* Clear floats in About section */
@@ -114,11 +126,14 @@
 </header>
 
 <section id="about">
-  <!-- Profile picture -->
+  <!-- Profile picture on right -->
   <img src="profile.jpg" alt="Tibo Duran" class="profile-pic">
 
-  <h1>Tibo Duran</h1>
-  <div class="subtitle">Assistant Professor in AI/Machine learning and Molecular modeling</div>
+  <!-- Subtitle with background image -->
+  <div class="subtitle-bg">
+    Assistant Professor in AI/Machine learning and Molecular modeling
+  </div>
+
   <p>
     I am a faculty member in the Department of Microbiology and Plant Pathology at University of California Riverside.
   </p>
