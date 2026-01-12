@@ -55,10 +55,6 @@
       color: #fff;
     }
 
-    h1, h2 { color: #fff; }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; }
-
     footer {
       text-align: center;
       padding: 40px;
@@ -79,7 +75,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: left center;
-      padding: 20px 20px 80px; /* extra bottom space */
+      padding: 20px 20px 120px;
       margin-top: 60px;
       position: relative;
     }
@@ -97,12 +93,26 @@
       font-size: 1.2em;
     }
 
-    /* Read more link BELOW image */
-    .hero .read-more {
+    /* Caption container BELOW image */
+    .hero .figure-caption {
       position: absolute;
       left: 20px;
-      bottom: -35px; /* pushes it below the image */
-      font-size: 1.05em;
+      bottom: -75px;
+      max-width: 600px;
+      font-family: "Georgia", "Times New Roman", serif;
+      line-height: 1.4;
+    }
+
+    .figure-caption .figure-title {
+      font-size: 0.95em;
+      font-weight: 600;
+      color: #e0e0e0;
+      margin-bottom: 4px;
+    }
+
+    .figure-caption .figure-link {
+      font-size: 0.85em;
+      color: #1a73e8;
     }
 
     /* About section */
@@ -130,7 +140,7 @@
         min-height: 300px;
         background-size: cover;
         background-position: center;
-        padding-bottom: 100px;
+        padding-bottom: 160px;
       }
 
       .hero .quote-container {
@@ -140,9 +150,9 @@
         text-align: center;
       }
 
-      .hero .read-more {
+      .hero .figure-caption {
         position: static;
-        margin-top: 20px;
+        margin-top: 15px;
         text-align: center;
       }
 
@@ -180,10 +190,16 @@
     The hard is what makes it great," — A League of Their Own
   </div>
 
-  <div class="read-more">
-    <a href="https://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.1c00800" target="_blank">
-      Read more from here about this research work
-    </a>
+  <!-- Figure caption -->
+  <div class="figure-caption">
+    <div class="figure-title">
+      Coarse-Grained Molecular Dynamics Simulations of Paclitaxel-Loaded Polymeric Micelles
+    </div>
+    <div class="figure-link">
+      <a href="https://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.1c00800" target="_blank">
+        Read more from here about this research work
+      </a>
+    </div>
   </div>
 </section>
 
