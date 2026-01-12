@@ -51,7 +51,7 @@
     section {
       max-width: 960px;
       margin: auto;
-      padding: 100px 20px 70px; /* increased top padding for more space after hero link */
+      padding: 100px 20px 70px; /* top padding increased for spacing after hero link */
       color: #fff;
     }
 
@@ -97,7 +97,7 @@
     .hero .figure-caption {
       position: absolute;
       left: 20px;
-      bottom: -45px; /* reduced negative value to bring title closer to image */
+      bottom: -45px; /* bring title closer to image */
       max-width: 600px;
       font-family: "Georgia", "Times New Roman", serif;
       line-height: 1.4;
@@ -133,6 +133,33 @@
     .about-content p {
       flex: 1;
       min-width: 250px;
+    }
+
+    /* Research images gallery */
+    .research-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .research-images img {
+      width: calc(20% - 12px); /* 5 images in a row with gap */
+      border: 2px solid #fff;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    @media(max-width: 768px){
+      .research-images img {
+        width: calc(50% - 10px); /* 2 images per row on tablet */
+      }
+    }
+
+    @media(max-width: 480px){
+      .research-images img {
+        width: 100%; /* 1 image per row on mobile */
+      }
     }
 
     @media(max-width: 768px){
@@ -178,7 +205,7 @@
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#teaching">Teaching</a>
-      <a href="#teaching">Open Positions</a>
+      <a href="#OpenPositions">Open Positions</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -223,6 +250,7 @@
   </div>
 </section>
 
+<!-- Research section -->
 <section id="research">
   <h2>Research</h2>
   <ul>
@@ -231,8 +259,18 @@
     <li>Biopharmaceutical, pharmaceutical engineering, agriculture and plant applications</li>
     <li>Multiscale modeling and simulations</li>
   </ul>
+
+  <!-- Research images -->
+  <div class="research-images">
+    <img src="liposome.JPG" alt="Liposome" />
+    <img src="peptide_pr.jpg" alt="Peptide" />
+    <img src="rna.jpg" alt="RNA" />
+    <img src="AAV.jpg" alt="AAV" />
+    <img src="lysosome.jpg" alt="Lysosome" />
+  </div>
 </section>
 
+<!-- Publications -->
 <section id="publications">
   <h2>Publications</h2>
   <p>
@@ -241,17 +279,19 @@
   </p>
 </section>
 
+<!-- Teaching -->
 <section id="teaching">
   <h2>Teaching</h2>
   <ul>
     <li>Computer-Aided Drug Design and Development</li>
     <li>Pharmaceutics</li>
-    <li>pharmacokinetics</li>
+    <li>Pharmacokinetics</li>
     <li>Novel Drug Delivery System</li>
   </ul>
 </section>
 
-  <section id="Open Positions">
+<!-- Open Positions -->
+<section id="OpenPositions">
   <h2>Open Positions</h2>
   <p>
     We are seeking Ph.D. students and visiting scientists/students with backgrounds in bioinformatics, biochemistry, 
@@ -259,7 +299,8 @@
     interested candidates should send their CV and contact information for three references to Dr. Tibo Duran at tibo.duran@ucr.edu
   </p>
 </section>
-  
+
+<!-- Contact -->
 <section id="contact">
   <h2>Contact</h2>
   <p>
