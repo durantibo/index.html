@@ -80,7 +80,6 @@
       position: relative;
     }
 
-    /* Quote */
     .hero .quote-container {
       position: absolute;
       right: 5%;
@@ -93,7 +92,6 @@
       font-size: 1.2em;
     }
 
-    /* Caption container BELOW image */
     .hero .figure-caption {
       position: absolute;
       left: 20px;
@@ -115,7 +113,6 @@
       color: #1a73e8;
     }
 
-    /* About section */
     .about-content {
       display: flex;
       align-items: flex-start;
@@ -135,7 +132,7 @@
       min-width: 250px;
     }
 
-    /* Research images gallery - two per row */
+    /* Research images gallery - 2 per row, full size */
     .research-images {
       display: flex;
       flex-wrap: wrap;
@@ -144,18 +141,22 @@
       justify-content: center;
     }
 
-    .research-images img {
-      width: calc(50% - 20px); /* two images per row */
-      max-width: 450px; /* limit size for large screens */
+    .research-images .image-container {
+      width: 48%; /* two images per row */
+      flex-grow: 1;
+    }
+
+    .research-images .image-container img {
+      width: 100%;
+      height: auto;
       border: 2px solid #fff;
       border-radius: 8px;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     @media(max-width: 768px){
-      .research-images img {
-        width: 100%; /* one per row on mobile */
-        max-width: 100%;
+      .research-images .image-container {
+        width: 100%; /* one per row on tablet/mobile */
       }
     }
 
@@ -208,14 +209,12 @@
   </nav>
 </header>
 
-<!-- Hero section -->
 <section class="hero">
   <div class="quote-container">
     "It's supposed to be hard. If it wasn't hard, everyone would do it.
     The hard is what makes it great," — A League of Their Own
   </div>
 
-  <!-- Figure caption -->
   <div class="figure-caption">
     <div class="figure-title">
       Coarse-Grained Molecular Dynamics Simulations of Paclitaxel-Loaded Polymeric Micelles
@@ -228,7 +227,6 @@
   </div>
 </section>
 
-<!-- About section -->
 <section id="about">
   <div class="about-content">
     <p>
@@ -247,7 +245,6 @@
   </div>
 </section>
 
-<!-- Research section -->
 <section id="research">
   <h2>Research</h2>
   <ul>
@@ -259,15 +256,14 @@
 
   <!-- Research images -->
   <div class="research-images">
-    <img src="liposome.JPG" alt="Liposome" />
-    <img src="peptide_pr.JPG" alt="Peptide" />
-    <img src="rna.JPG" alt="RNA" />
-    <img src="AAV.JPG" alt="AAV" />
-    <img src="lysosome.JPG" alt="Lysosome" />
+    <div class="image-container"><img src="liposome.JPG" alt="Liposome"></div>
+    <div class="image-container"><img src="peptide_pr.jpg" alt="Peptide"></div>
+    <div class="image-container"><img src="rna.jpg" alt="RNA"></div>
+    <div class="image-container"><img src="AAV.jpg" alt="AAV"></div>
+    <div class="image-container"><img src="lysosome.jpg" alt="Lysosome"></div>
   </div>
 </section>
 
-<!-- Publications -->
 <section id="publications">
   <h2>Publications</h2>
   <p>
@@ -276,7 +272,6 @@
   </p>
 </section>
 
-<!-- Teaching -->
 <section id="teaching">
   <h2>Teaching</h2>
   <ul>
@@ -287,7 +282,6 @@
   </ul>
 </section>
 
-<!-- Open Positions -->
 <section id="OpenPositions">
   <h2>Open Positions</h2>
   <p>
@@ -297,7 +291,6 @@
   </p>
 </section>
 
-<!-- Contact -->
 <section id="contact">
   <h2>Contact</h2>
   <p>
