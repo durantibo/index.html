@@ -7,12 +7,13 @@
 
   <style>
     html { scroll-behavior: smooth; }
+
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
       margin: 0;
-      color: #fff; 
+      color: #fff;
       line-height: 1.65;
-      background: #000; 
+      background: #000;
     }
 
     /* Fixed header */
@@ -20,10 +21,10 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: #111; 
+      background: #111;
       border-bottom: 1px solid #444;
       z-index: 1000;
-      height: 60px; /* header height */
+      height: 60px;
       display: flex;
       align-items: center;
     }
@@ -50,8 +51,8 @@
     section {
       max-width: 960px;
       margin: auto;
-      padding: 50px 20px 70px; 
-      color: #fff; 
+      padding: 50px 20px 70px;
+      color: #fff;
     }
 
     h1, h2 { color: #fff; }
@@ -70,24 +71,24 @@
     a { color: #1a73e8; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* Hero section: pushed down by header height */
+    /* Hero section */
     .hero {
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
       width: 100%;
       min-height: 400px;
-      background-image: url('cover_page_polymer.jpg'); 
-      background-size: contain; 
+      background-image: url('cover_page_polymer.jpg');
+      background-size: contain;
       background-repeat: no-repeat;
-      background-position: left 80%; 
+      background-position: left 80%;
       padding: 20px;
-      margin-top: 60px; /* push hero below header */
-      margin-bottom: 30px; 
+      margin-top: 60px;
+      margin-bottom: 30px;
       position: relative;
     }
 
-    /* Quote on right */
+    /* Quote */
     .hero .quote-container {
       position: absolute;
       right: 5%;
@@ -101,7 +102,23 @@
       color: #fff;
     }
 
-    /* About section with profile picture next to paragraph */
+    /* Read more link under background image */
+    .hero .read-more {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      font-size: 1.05em;
+      background: rgba(0,0,0,0.6);
+      padding: 8px 14px;
+      border-radius: 6px;
+    }
+
+    .hero .read-more a {
+      color: #1a73e8;
+      font-weight: 500;
+    }
+
+    /* About section */
     .about-content {
       display: flex;
       align-items: flex-start;
@@ -128,24 +145,33 @@
         background-size: cover;
         background-position: center center;
       }
+
       .hero .quote-container {
         position: static;
         margin-top: 20px;
         max-width: 90%;
         text-align: center;
       }
+
+      .hero .read-more {
+        position: static;
+        margin-top: 20px;
+        align-self: center;
+      }
+
       .about-content {
         flex-direction: column;
         align-items: center;
       }
+
       .about-content img {
         width: 150px;
       }
+
       .about-content p {
         text-align: center;
       }
     }
-
   </style>
 </head>
 
@@ -167,7 +193,14 @@
 <!-- Hero section -->
 <section class="hero">
   <div class="quote-container">
-    "It's supposed to be hard. If it wasn't hard, everyone would do it. The hard is what makes it great," —A League of Their Own
+    "It's supposed to be hard. If it wasn't hard, everyone would do it.
+    The hard is what makes it great," — A League of Their Own
+  </div>
+
+  <div class="read-more">
+    <a href="https://profiles.ucr.edu/app/home/profile/fnud" target="_blank">
+      Read more from here about this research work
+    </a>
   </div>
 </section>
 
@@ -175,17 +208,20 @@
 <section id="about">
   <div class="about-content">
     <p>
-      I am a faculty member in the Department of Microbiology and Plant Pathology at University of California Riverside.
-      My research integrates artificial intelligence, machine learning (AI/ML), and nano-scale molecular modeling 
-      to investigate disease mechanisms and advance bioinformatics analyses. 
-      By combining computational modeling with large-scale biological data, my work aims to improve disease prediction, 
-      classification, and therapeutic discovery and delivery.
+      I am a faculty member in the Department of Microbiology and Plant Pathology
+      at the University of California, Riverside. My research integrates
+      artificial intelligence, machine learning (AI/ML), and nano-scale molecular
+      modeling to investigate disease mechanisms and advance bioinformatics
+      analyses. By combining computational modeling with large-scale biological
+      data, my work aims to improve disease prediction, classification, and
+      therapeutic discovery and delivery.
       <br><br>
-  Read more on faculty page at UCR
-  <a href="https://profiles.ucr.edu/app/home/profile/fnud" target="_blank">
-    UCR Faculty Profile
-  </a>
+      Read more on faculty page at UCR:
+      <a href="https://profiles.ucr.edu/app/home/profile/fnud" target="_blank">
+        UCR Faculty Profile
+      </a>
     </p>
+
     <img src="profile.png" alt="Tibo Duran">
   </div>
 </section>
@@ -193,9 +229,9 @@
 <section id="research">
   <h2>Research</h2>
   <ul>
-    <li>Using AI and machine learning for disease modeling in both agriculture and human health</li>
-    <li>Computational modeling and molecular dynamics (MD) simulations of complex biological systems</li>
-    <li>Biopharmaceutical, pharmaceutical engineering, agriculture and plant applications</li>
+    <li>Using AI and machine learning for disease modeling in agriculture and human health</li>
+    <li>Computational modeling and molecular dynamics (MD) simulations</li>
+    <li>Biopharmaceutical, pharmaceutical engineering, and plant applications</li>
     <li>Multiscale modeling and simulations</li>
   </ul>
 </section>
@@ -204,7 +240,9 @@
   <h2>Publications</h2>
   <p>
     A full list of publications is available on
-    <a href="https://scholar.google.com/citations?hl=en&user=Hz75fXcAAAAJ" target="_blank">Google Scholar</a>.
+    <a href="https://scholar.google.com/citations?hl=en&user=Hz75fXcAAAAJ" target="_blank">
+      Google Scholar
+    </a>.
   </p>
 </section>
 
@@ -218,8 +256,10 @@
 <section id="contact">
   <h2>Contact</h2>
   <p>
-    Email: <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a><br>
-    GitHub: <a href="https://github.com/durantibo">github.com/durantibo</a>
+    Email:
+    <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a><br>
+    GitHub:
+    <a href="https://github.com/durantibo">github.com/durantibo</a>
   </p>
 </section>
 
