@@ -73,18 +73,14 @@
 
     /* Hero section */
     .hero {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
       width: 100%;
-      min-height: 400px;
+      min-height: 420px;
       background-image: url('cover_page_polymer.jpg');
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: left 80%;
-      padding: 20px;
+      background-position: left center;
+      padding: 20px 20px 80px; /* extra bottom space */
       margin-top: 60px;
-      margin-bottom: 30px;
       position: relative;
     }
 
@@ -92,30 +88,21 @@
     .hero .quote-container {
       position: absolute;
       right: 5%;
-      top: 60%;
+      top: 55%;
       max-width: 40%;
       padding: 15px 20px;
       background: rgba(0,0,0,0.5);
       border-radius: 8px;
       font-style: italic;
       font-size: 1.2em;
-      color: #fff;
     }
 
-    /* Read more link */
+    /* Read more link BELOW image */
     .hero .read-more {
       position: absolute;
       left: 20px;
-      bottom: 20px;
+      bottom: -35px; /* pushes it below the image */
       font-size: 1.05em;
-      background: rgba(0,0,0,0.6);
-      padding: 8px 14px;
-      border-radius: 6px;
-    }
-
-    .hero .read-more a {
-      color: #1a73e8;
-      font-weight: 500;
     }
 
     /* About section */
@@ -140,10 +127,10 @@
 
     @media(max-width: 768px){
       .hero {
-        flex-direction: column;
         min-height: 300px;
         background-size: cover;
-        background-position: center center;
+        background-position: center;
+        padding-bottom: 100px;
       }
 
       .hero .quote-container {
@@ -156,16 +143,12 @@
       .hero .read-more {
         position: static;
         margin-top: 20px;
-        align-self: center;
+        text-align: center;
       }
 
       .about-content {
         flex-direction: column;
         align-items: center;
-      }
-
-      .about-content img {
-        width: 150px;
       }
 
       .about-content p {
@@ -212,55 +195,15 @@
       at the University of California, Riverside. My research integrates
       artificial intelligence, machine learning (AI/ML), and nano-scale molecular
       modeling to investigate disease mechanisms and advance bioinformatics
-      analyses. By combining computational modeling with large-scale biological
-      data, my work aims to improve disease prediction, classification, and
-      therapeutic discovery and delivery.
+      analyses.
       <br><br>
-      Faculty page at UCR:
+      Faculty page:
       <a href="https://profiles.ucr.edu/app/home/profile/fnud" target="_blank">
         UCR Faculty Profile
       </a>
     </p>
-
     <img src="profile.png" alt="Tibo Duran">
   </div>
-</section>
-
-<section id="research">
-  <h2>Research</h2>
-  <ul>
-    <li>Using AI and machine learning for disease modeling in agriculture and human health</li>
-    <li>Computational modeling and molecular dynamics (MD) simulations</li>
-    <li>Biopharmaceutical, pharmaceutical engineering, and plant applications</li>
-    <li>Multiscale modeling and simulations</li>
-  </ul>
-</section>
-
-<section id="publications">
-  <h2>Publications</h2>
-  <p>
-    A full list of publications is available on
-    <a href="https://scholar.google.com/citations?hl=en&user=Hz75fXcAAAAJ" target="_blank">
-      Google Scholar
-    </a>.
-  </p>
-</section>
-
-<section id="teaching">
-  <h2>Teaching</h2>
-  <ul>
-    <li>Course</li>
-  </ul>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    Email:
-    <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a><br>
-    GitHub:
-    <a href="https://github.com/durantibo">github.com/durantibo</a>
-  </p>
 </section>
 
 <footer>
