@@ -16,7 +16,6 @@
       background: #000;
     }
 
-    /* Fixed header */
     header {
       position: fixed;
       top: 0;
@@ -52,7 +51,6 @@
       max-width: 960px;
       margin: auto;
       padding: 100px 20px 70px;
-      color: #fff;
     }
 
     footer {
@@ -64,10 +62,9 @@
       background: #111;
     }
 
-    a { color: #1a73e8; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: #1a73e8; }
 
-    /* Hero section */
+    /* Hero */
     .hero {
       width: 100%;
       min-height: 420px;
@@ -92,45 +89,18 @@
       font-size: 1.2em;
     }
 
-    .hero .figure-caption {
-      position: absolute;
-      left: 20px;
-      bottom: -45px;
-      max-width: 600px;
-      font-family: "Georgia", "Times New Roman", serif;
-      line-height: 1.4;
-    }
-
-    .figure-caption .figure-title {
-      font-size: 0.55em;
-      font-weight: 600;
-      color: #e0e0e0;
-      margin-bottom: 6px;
-    }
-
-    .figure-caption .figure-link {
-      font-size: 0.55em;
-      color: #1a73e8;
-    }
-
-    /* About section */
+    /* About */
     .about-content {
       display: flex;
-      align-items: flex-start;
       gap: 20px;
       flex-wrap: wrap;
+      align-items: flex-start;
     }
 
     .about-content img {
       width: 180px;
       border-radius: 50%;
       border: 3px solid #fff;
-      flex-shrink: 0;
-    }
-
-    .about-content p {
-      flex: 1;
-      min-width: 250px;
     }
 
     /* Slideshow */
@@ -138,7 +108,7 @@
       position: relative;
       max-width: 800px;
       height: 420px;
-      margin: 40px auto 0;
+      margin: 40px auto 15px;
       overflow: hidden;
       background: #111;
       border-radius: 10px;
@@ -154,14 +124,12 @@
       justify-content: center;
     }
 
-    .slide.active {
-      opacity: 1;
-    }
+    .slide.active { opacity: 1; }
 
     .slide img {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* FULL image visible */
+      object-fit: contain;
     }
 
     .nav {
@@ -177,38 +145,42 @@
       border-radius: 50%;
     }
 
-    .nav:hover {
-      background: rgba(0,0,0,0.8);
-    }
-
     .prev { left: 15px; }
     .next { right: 15px; }
 
+    /* Caption under slideshow */
+    .slide-caption {
+      text-align: center;
+      margin-top: 12px;
+      font-family: "Georgia", "Times New Roman", serif;
+    }
+
+    .slide-caption .title {
+      font-size: 1em;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #eaeaea;
+    }
+
+    .slide-caption a {
+      font-size: 0.9em;
+    }
+
     @media (max-width: 768px) {
       .hero {
-        min-height: 300px;
         background-size: cover;
         background-position: center;
-        padding-bottom: 160px;
       }
-
-      .hero .quote-container,
-      .hero .figure-caption {
+      .hero .quote-container {
         position: static;
-        margin-top: 20px;
         max-width: 100%;
+        margin-top: 20px;
         text-align: center;
       }
-
       .about-content {
         flex-direction: column;
         align-items: center;
       }
-
-      .about-content p {
-        text-align: center;
-      }
-
       .slideshow {
         height: 280px;
       }
@@ -220,7 +192,7 @@
 
 <header>
   <nav>
-    <div><strong>Duran Computational Lab</strong></div>
+    <strong>Duran Computational Lab</strong>
     <div>
       <a href="#about">About</a>
       <a href="#research">Research</a>
@@ -235,18 +207,7 @@
 <section class="hero">
   <div class="quote-container">
     "It's supposed to be hard. If it wasn't hard, everyone would do it.
-    The hard is what makes it great," — A League of Their Own
-  </div>
-
-  <div class="figure-caption">
-    <div class="figure-title">
-      Coarse-Grained Molecular Dynamics Simulations of Paclitaxel-Loaded Polymeric Micelles
-    </div>
-    <div class="figure-link">
-      <a href="https://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.1c00800" target="_blank">
-        Read more from here about this research work
-      </a>
-    </div>
+    The hard is what makes it great."
   </div>
 </section>
 
@@ -254,15 +215,8 @@
   <div class="about-content">
     <p>
       I am a faculty member in the Department of Microbiology and Plant Pathology
-      at the University of California, Riverside. My research integrates
-      artificial intelligence, machine learning (AI/ML), and nano-scale molecular
-      modeling to investigate disease mechanisms and advance bioinformatics
-      analyses.
-      <br><br>
-      Faculty page:
-      <a href="https://profiles.ucr.edu/app/home/profile/fnud" target="_blank">
-        UCR Faculty Profile
-      </a>
+      at the University of California, Riverside. My research integrates AI/ML
+      and molecular modeling to investigate disease mechanisms.
     </p>
     <img src="profile.png" alt="Tibo Duran">
   </div>
@@ -270,53 +224,29 @@
 
 <section id="research">
   <h2>Research</h2>
-  <ul>
-    <li>Using AI and machine learning for disease modeling in agriculture and human health</li>
-    <li>Computational modeling and molecular dynamics simulations</li>
-    <li>Biopharmaceutical and pharmaceutical engineering applications</li>
-    <li>Multiscale modeling and simulations</li>
-  </ul>
 
-  <!-- Slideshow -->
   <div class="slideshow">
-    <div class="slide active"><img src="liposome.JPG" alt="Liposome"></div>
-    <div class="slide"><img src="peptide_pr.JPG" alt="Peptide"></div>
-    <div class="slide"><img src="rna.JPG" alt="RNA"></div>
-    <div class="slide"><img src="aav.JPG" alt="AAV"></div>
-    <div class="slide"><img src="lysosome.JPG" alt="Lysosome"></div>
+    <div class="slide active"><img src="liposome.JPG"></div>
+    <div class="slide"><img src="peptide_pr.JPG"></div>
+    <div class="slide"><img src="rna.JPG"></div>
+    <div class="slide"><img src="aav.JPG"></div>
+    <div class="slide"><img src="lysosome.JPG"></div>
 
     <button class="nav prev">&#10094;</button>
     <button class="nav next">&#10095;</button>
+  </div>
+
+  <div class="slide-caption">
+    <div class="title" id="slideTitle"></div>
+    <a id="slideLink" href="#" target="_blank">Read more about this research</a>
   </div>
 </section>
 
 <section id="publications">
   <h2>Publications</h2>
-  <p>
-    A full list of publications is available on
-    <a href="https://scholar.google.com/citations?hl=en&user=Hz75fXcAAAAJ" target="_blank">Google Scholar</a>.
-  </p>
-</section>
-
-<section id="teaching">
-  <h2>Teaching</h2>
-  <ul>
-    <li>Computer-Aided Drug Design and Development (Spring 2025)</li>
-    <li>Novel Drug Delivery System (Spring 2025)</li>
-    <li>Pharmacokinetics (Summer 2025)</li>
-    <li>Pharmaceutics (Fall 2025)</li>
-  </ul>
-</section>
-
-<section id="OpenPositions">
-  <h2>Open Positions</h2>
-  <p>
-    We are seeking Ph.D. students and visiting scientists with backgrounds in
-    bioinformatics, biochemistry, genetics, pharmaceutics, computer science,
-    or biomedical and chemical engineering.
-    Interested candidates should email Dr. Tibo Duran at
-    <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a>.
-  </p>
+  <a href="https://scholar.google.com/citations?hl=en&user=Hz75fXcAAAAJ" target="_blank">
+    Google Scholar
+  </a>
 </section>
 
 <section id="contact">
@@ -327,35 +257,61 @@
   </p>
 </section>
 
-<footer>
-  © 2026 Tibo Duran
-</footer>
+<footer>© 2026 Tibo Duran</footer>
 
 <script>
   const slides = document.querySelectorAll(".slide");
-  const nextBtn = document.querySelector(".next");
-  const prevBtn = document.querySelector(".prev");
+  const titleEl = document.getElementById("slideTitle");
+  const linkEl = document.getElementById("slideLink");
+
+  const slideData = [
+    {
+      title: "Manufacturing process of liposomal Formation: A coarse-grained molecular dynamics simulation",
+      link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324005222"
+    },
+    {
+      title: "Exploring Latent Space for Generating Peptide Analogs Using Protein Language Models",
+      link: "https://ieeexplore.ieee.org/document/10821777"
+    },
+    {
+      title: "Head-to-head comparison of in vitro and in vivo efficacy of pHLIP-conjugated anti-seed gamma peptide nucleic acids",
+      link: "https://linkinghub.elsevier.com/retrieve/pii/S2666386423003922"
+    },
+    {
+      title: "Studying the ssDNA loaded adeno-associated virus aggregation using coarse-grained molecular dynamics simulations",
+      link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324002199?via%3Dihub"
+    },
+    {
+      title: "Molecular Dynamics Modeling Based Investigation of the Effect of Freezing Rate on Lysozyme Stability",
+      link: "https://link.springer.com/article/10.1007/s11095-022-03358-z"
+    }
+  ];
+
   let index = 0;
 
   function showSlide(i) {
-    slides.forEach(slide => slide.classList.remove("active"));
+    slides.forEach(s => s.classList.remove("active"));
     slides[i].classList.add("active");
+    titleEl.textContent = slideData[i].title;
+    linkEl.href = slideData[i].link;
   }
 
-  nextBtn.addEventListener("click", () => {
+  document.querySelector(".next").onclick = () => {
     index = (index + 1) % slides.length;
     showSlide(index);
-  });
+  };
 
-  prevBtn.addEventListener("click", () => {
+  document.querySelector(".prev").onclick = () => {
     index = (index - 1 + slides.length) % slides.length;
     showSlide(index);
-  });
+  };
 
   setInterval(() => {
     index = (index + 1) % slides.length;
     showSlide(index);
   }, 5000);
+
+  showSlide(0);
 </script>
 
 </body>
