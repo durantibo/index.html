@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Duran Computational Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
@@ -16,7 +19,7 @@
       background: #000;
     }
 
-    /* Fixed header */
+    /* ================= Header ================= */
     header {
       position: fixed;
       top: 0;
@@ -46,7 +49,9 @@
       font-weight: 500;
     }
 
-    nav a:hover { color: #1a73e8; }
+    nav a:hover {
+      color: #1a73e8;
+    }
 
     section {
       max-width: 960px;
@@ -63,10 +68,16 @@
       background: #111;
     }
 
-    a { color: #1a73e8; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
 
-    /* Hero section */
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= Hero ================= */
     .hero {
       width: 100%;
       min-height: 420px;
@@ -79,22 +90,13 @@
       position: relative;
     }
 
-    .hero .lab-news-title {
-      position: absolute;
-      right: 5%;
-      top: 48%;
-      font-size: 1.1em;
-      font-weight: 600;
-      color: #fff;
-    }
-
     .hero .quote-container {
       position: absolute;
       right: 5%;
       top: 55%;
       max-width: 40%;
       padding: 15px 20px;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       border-radius: 8px;
       font-style: italic;
       font-size: 1.2em;
@@ -121,7 +123,7 @@
       color: #1a73e8;
     }
 
-    /* About */
+    /* ================= About ================= */
     .about-content {
       display: flex;
       align-items: flex-start;
@@ -141,7 +143,7 @@
       min-width: 250px;
     }
 
-    /* Slideshow */
+    /* ================= Slideshow ================= */
     .slideshow {
       position: relative;
       max-width: 800px;
@@ -162,7 +164,9 @@
       justify-content: center;
     }
 
-    .slide.active { opacity: 1; }
+    .slide.active {
+      opacity: 1;
+    }
 
     .slide img {
       width: 100%;
@@ -174,7 +178,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       color: #fff;
       border: none;
       font-size: 28px;
@@ -183,8 +187,17 @@
       border-radius: 50%;
     }
 
-    .prev { left: 15px; }
-    .next { right: 15px; }
+    .nav:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+      left: 15px;
+    }
+
+    .next {
+      right: 15px;
+    }
 
     .slide-caption {
       text-align: center;
@@ -199,6 +212,11 @@
       margin-bottom: 6px;
     }
 
+    .slide-caption a {
+      font-size: 0.9em;
+    }
+
+    /* ================= Responsive ================= */
     @media (max-width: 768px) {
       .hero {
         min-height: 300px;
@@ -207,7 +225,6 @@
         padding-bottom: 160px;
       }
 
-      .hero .lab-news-title,
       .hero .quote-container,
       .hero .figure-caption {
         position: static;
@@ -220,92 +237,201 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .about-content p {
+        text-align: center;
+      }
+
+      .slideshow {
+        height: 280px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <div><strong>Duran Computational Lab</strong></div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#LabNews">Lab News</a>
-      <a href="#contact">Contact</a>
+  <!-- ================= Header ================= -->
+  <header>
+    <nav>
+      <div><strong>Duran Computational Lab</strong></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#OpenPositions">Open Positions</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= Hero ================= -->
+  <section class="hero">
+    <div class="quote-container">
+      "It's supposed to be hard. If it wasn't hard, everyone would do it.
+      The hard is what makes it great," — A League of Their Own
     </div>
-  </nav>
-</header>
 
-<section class="hero">
-  <div class="lab-news-title">Lab News</div>
-
-  <div class="quote-container">
-    "It's supposed to be hard. If it wasn't hard, everyone would do it.
-    The hard is what makes it great," — <em>A League of Their Own</em>
-  </div>
-
-  <div class="figure-caption">
-    <div class="figure-title">
-      Coarse-Grained Molecular Dynamics Simulations of Paclitaxel-Loaded Polymeric Micelles
+    <div class="figure-caption">
+      <div class="figure-title">
+        Coarse-Grained Molecular Dynamics Simulations of Paclitaxel-Loaded Polymeric Micelles
+      </div>
+      <div class="figure-link">
+        <a href="https://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.1c00800" target="_blank">
+          Read more from here about this research work
+        </a>
+      </div>
     </div>
-    <div class="figure-link">
-      <a href="https://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.1c00800" target="_blank">
-        Read more from here about this research work
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="about">
-  <div class="about-content">
+  <!-- ================= About ================= -->
+  <section id="about">
+    <div class="about-content">
+      <p>
+        I am a faculty member in the Department of Microbiology and Plant Pathology
+        at the University of California, Riverside. My research integrates artificial
+        intelligence, machine learning (AI/ML), and nano-scale molecular modeling to
+        investigate disease mechanisms and advance bioinformatics analyses.
+        <br><br>
+        Faculty page:
+        <a href="https://profiles.ucr.edu/app/home/profile/fnud" target="_blank">
+          UCR Faculty Profile
+        </a>
+      </p>
+
+      <img src="profile.png" alt="Tibo Duran">
+    </div>
+  </section>
+
+  <!-- ================= Research ================= -->
+  <section id="research">
+    <h2>Research</h2>
+
+    <ul>
+      <li>AI/machine learning in agriculture to model and forecast plant diseases</li>
+      <li>Computational modeling and molecular dynamics (MD) simulations of complex biological systems</li>
+      <li>Integrate data-driven and physics-based approaches to study disease mechanisms, risk prediction, and therapy development</li>
+      <li>Interdisciplinary research spanning agriculture and plant pathology, biopharmaceutical and pharmaceutical sciences, biophysics, and chemical engineering</li>
+    </ul>
+
+    <div class="slideshow">
+      <div class="slide active"><img src="liposome.JPG"></div>
+      <div class="slide"><img src="peptide_pr.JPG"></div>
+      <div class="slide"><img src="rna.JPG"></div>
+      <div class="slide"><img src="aav.JPG"></div>
+      <div class="slide"><img src="lysosome.JPG"></div>
+
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+    </div>
+
+    <div class="slide-caption">
+      <div class="title" id="slideTitle"></div>
+      <a id="slideLink" target="_blank">Read more about this research</a>
+    </div>
+  </section>
+
+  <!-- ================= Publications ================= -->
+  <section id="publications">
+    <h2>Publications</h2>
     <p>
-      I am a faculty member in the Department of Microbiology and Plant Pathology
-      at the University of California, Riverside. My research integrates
-      artificial intelligence, machine learning (AI/ML), and nano-scale molecular
-      modeling to investigate disease mechanisms and advance bioinformatics analyses.
-      <br><br>
-      <a href="https://profiles.ucr.edu/app/home/profile/fnud" target="_blank">
-        UCR Faculty Profile
-      </a>
+      A full list of publications is available on
+      <a href="https://scholar.google.com/citations?hl=en&user=Hz75fXcAAAAJ" target="_blank">
+        Google Scholar
+      </a>.
     </p>
-    <img src="profile.png" alt="Tibo Duran">
-  </div>
-</section>
+  </section>
 
-<section id="research">
-  <h2>Research</h2>
-  <ul>
-    <li>AI/machine learning in agriculture to model and forecast plant diseases</li>
-    <li>Computational modeling and molecular dynamics (MD) simulations of complex biological systems</li>
-    <li>Integrated data-driven and physics-based approaches for disease understanding, prediction, and therapy development</li>
-    <li>Interdisciplinary research spanning agriculture, plant pathology, biopharmaceutical science, biophysics, and chemical engineering</li>
-  </ul>
-</section>
+  <!-- ================= Teaching ================= -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <ul>
+      <li>Computer-Aided Drug Design and Development (Spring 2025)</li>
+      <li>Novel Drug Delivery System (Spring 2025)</li>
+      <li>Pharmacokinetics (Summer 2025)</li>
+      <li>Pharmaceutics (Fall 2025)</li>
+    </ul>
+  </section>
 
-<section id="LabNews">
-  <h2>Lab News</h2>
-  <p>
-    We are recruiting <strong>Ph.D. students, postdoctoral researchers, and visiting scholars</strong>
-    with backgrounds in AI/ML, programming, and Linux/Unix-based HPC environments.
-    Please send your CV to <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a>.
-  </p>
-</section>
+  <!-- ================= Open Positions ================= -->
+  <section id="OpenPositions">
+    <h2>Open Positions</h2>
+    <p>
+      Seeking Ph.D. students, postdoc researchers and visiting scientists/students from diverse backgrounds.
+      Applicants should have experience in AI/ML, programming and Linux/Unix command-line experience using HPC clusters.
+      Interested candidates should send the CV to Dr. Tibo Duran at tibo.duran@ucr.edu.
+    </p>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    Email: <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a><br>
-    GitHub: <a href="https://github.com/durantibo">github.com/durantibo</a>
-  </p>
-</section>
+  <!-- ================= Contact ================= -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a><br>
+      GitHub: <a href="https://github.com/durantibo">github.com/durantibo</a>
+    </p>
+  </section>
 
-<footer>
-  © 2026 Tibo Duran
-</footer>
+  <footer>
+    © 2026 Tibo Duran
+  </footer>
+
+  <!-- ================= Script ================= -->
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    const titleEl = document.getElementById("slideTitle");
+    const linkEl = document.getElementById("slideLink");
+
+    const slideData = [
+      {
+        title: "Manufacturing process of liposomal Formation: A coarse-grained molecular dynamics simulation",
+        link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324005222"
+      },
+      {
+        title: "Exploring Latent Space for Generating Peptide Analogs Using Protein Language Models",
+        link: "https://ieeexplore.ieee.org/document/10821777"
+      },
+      {
+        title: "Head-to-head comparison of in vitro and in vivo efficacy of pHLIP-conjugated anti-seed gamma peptide nucleic acids",
+        link: "https://linkinghub.elsevier.com/retrieve/pii/S2666386423003922"
+      },
+      {
+        title: "Studying the ssDNA loaded adeno-associated virus aggregation using coarse-grained molecular dynamics simulations",
+        link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324002199?via%3Dihub"
+      },
+      {
+        title: "Molecular Dynamics Modeling Based Investigation of the Effect of Freezing Rate on Lysozyme Stability",
+        link: "https://link.springer.com/article/10.1007/s11095-022-03358-z"
+      }
+    ];
+
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(s => s.classList.remove("active"));
+      slides[i].classList.add("active");
+      titleEl.textContent = slideData[i].title;
+      linkEl.href = slideData[i].link;
+    }
+
+    document.querySelector(".next").onclick = () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    };
+
+    document.querySelector(".prev").onclick = () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    };
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, 5000);
+
+    showSlide(0);
+  </script>
 
 </body>
 </html>
