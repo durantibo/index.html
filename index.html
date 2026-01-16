@@ -79,6 +79,15 @@
       position: relative;
     }
 
+    .hero .lab-news-title {
+      position: absolute;
+      right: 5%;
+      top: 48%;
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #fff;
+    }
+
     .hero .quote-container {
       position: absolute;
       right: 5%;
@@ -153,14 +162,12 @@
       justify-content: center;
     }
 
-    .slide.active {
-      opacity: 1;
-    }
+    .slide.active { opacity: 1; }
 
     .slide img {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* FULL image visible */
+      object-fit: contain;
     }
 
     .nav {
@@ -176,14 +183,9 @@
       border-radius: 50%;
     }
 
-    .nav:hover {
-      background: rgba(0,0,0,0.8);
-    }
-
     .prev { left: 15px; }
     .next { right: 15px; }
 
-    /* Slideshow caption */
     .slide-caption {
       text-align: center;
       margin-top: 10px;
@@ -197,10 +199,6 @@
       margin-bottom: 6px;
     }
 
-    .slide-caption a {
-      font-size: 0.9em;
-    }
-
     @media (max-width: 768px) {
       .hero {
         min-height: 300px;
@@ -209,6 +207,7 @@
         padding-bottom: 160px;
       }
 
+      .hero .lab-news-title,
       .hero .quote-container,
       .hero .figure-caption {
         position: static;
@@ -220,14 +219,6 @@
       .about-content {
         flex-direction: column;
         align-items: center;
-      }
-
-      .about-content p {
-        text-align: center;
-      }
-
-      .slideshow {
-        height: 280px;
       }
     }
   </style>
@@ -243,16 +234,18 @@
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#teaching">Teaching</a>
-      <a href="#OpenPositions">Open Positions</a>
+      <a href="#LabNews">Lab News</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
 
 <section class="hero">
+  <div class="lab-news-title">Lab News</div>
+
   <div class="quote-container">
     "It's supposed to be hard. If it wasn't hard, everyone would do it.
-    The hard is what makes it great," — A League of Their Own
+    The hard is what makes it great," — <em>A League of Their Own</em>
   </div>
 
   <div class="figure-caption">
@@ -273,10 +266,8 @@
       I am a faculty member in the Department of Microbiology and Plant Pathology
       at the University of California, Riverside. My research integrates
       artificial intelligence, machine learning (AI/ML), and nano-scale molecular
-      modeling to investigate disease mechanisms and advance bioinformatics
-      analyses.
+      modeling to investigate disease mechanisms and advance bioinformatics analyses.
       <br><br>
-      Faculty page:
       <a href="https://profiles.ucr.edu/app/home/profile/fnud" target="_blank">
         UCR Faculty Profile
       </a>
@@ -288,58 +279,19 @@
 <section id="research">
   <h2>Research</h2>
   <ul>
-    <li>Using AI and machine learning for disease modeling in both agriculture and human health</li>
+    <li>AI/machine learning in agriculture to model and forecast plant diseases</li>
     <li>Computational modeling and molecular dynamics (MD) simulations of complex biological systems</li>
-    <li>Biopharmaceutical, pharmaceutical engineering, agriculture and plant applications</li>
-    <li>Multiscale modeling and simulations</li>
-  </ul>
-
-  <!-- Slideshow -->
-  <div class="slideshow">
-    <div class="slide active"><img src="liposome.JPG"></div>
-    <div class="slide"><img src="peptide_pr.JPG"></div>
-    <div class="slide"><img src="rna.JPG"></div>
-    <div class="slide"><img src="aav.JPG"></div>
-    <div class="slide"><img src="lysosome.JPG"></div>
-
-    <button class="nav prev">&#10094;</button>
-    <button class="nav next">&#10095;</button>
-  </div>
-
-  <div class="slide-caption">
-    <div class="title" id="slideTitle"></div>
-    <a id="slideLink" target="_blank">Read more about this research</a>
-  </div>
-</section>
-
-<section id="publications">
-  <h2>Publications</h2>
-  <p>
-    A full list of publications is available on
-    <a href="https://scholar.google.com/citations?hl=en&user=Hz75fXcAAAAJ" target="_blank">
-      Google Scholar
-    </a>.
-  </p>
-</section>
-
-<section id="teaching">
-  <h2>Teaching</h2>
-  <ul>
-    <li>Computer-Aided Drug Design and Development (Spring 2025)</li>
-    <li>Novel Drug Delivery System (Spring 2025)</li>
-    <li>Pharmacokinetics (Summer 2025)</li>
-    <li>Pharmaceutics (Fall 2025)</li>
+    <li>Integrated data-driven and physics-based approaches for disease understanding, prediction, and therapy development</li>
+    <li>Interdisciplinary research spanning agriculture, plant pathology, biopharmaceutical science, biophysics, and chemical engineering</li>
   </ul>
 </section>
 
-<section id="OpenPositions">
-  <h2>Open Positions</h2>
+<section id="LabNews">
+  <h2>Lab News</h2>
   <p>
-    We are seeking Ph.D. students and visiting scientists/students with backgrounds
-    in bioinformatics, biochemistry, genetics, plant pathology, pharmaceutics,
-    physical chemistry, computer science, or biomedical and chemical engineering.
-    Interested candidates should send their CV and contact information for three
-    references to Dr. Tibo Duran at tibo.duran@ucr.edu
+    We are recruiting <strong>Ph.D. students, postdoctoral researchers, and visiting scholars</strong>
+    with backgrounds in AI/ML, programming, and Linux/Unix-based HPC environments.
+    Please send your CV to <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a>.
   </p>
 </section>
 
@@ -354,61 +306,6 @@
 <footer>
   © 2026 Tibo Duran
 </footer>
-
-<script>
-  const slides = document.querySelectorAll(".slide");
-  const titleEl = document.getElementById("slideTitle");
-  const linkEl = document.getElementById("slideLink");
-
-  const slideData = [
-    {
-      title: "Manufacturing process of liposomal Formation: A coarse-grained molecular dynamics simulation",
-      link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324005222"
-    },
-    {
-      title: "Exploring Latent Space for Generating Peptide Analogs Using Protein Language Models",
-      link: "https://ieeexplore.ieee.org/document/10821777"
-    },
-    {
-      title: "Head-to-head comparison of in vitro and in vivo efficacy of pHLIP-conjugated anti-seed gamma peptide nucleic acids",
-      link: "https://linkinghub.elsevier.com/retrieve/pii/S2666386423003922"
-    },
-    {
-      title: "Studying the ssDNA loaded adeno-associated virus aggregation using coarse-grained molecular dynamics simulations",
-      link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324002199?via%3Dihub"
-    },
-    {
-      title: "Molecular Dynamics Modeling Based Investigation of the Effect of Freezing Rate on Lysozyme Stability",
-      link: "https://link.springer.com/article/10.1007/s11095-022-03358-z"
-    }
-  ];
-
-  let index = 0;
-
-  function showSlide(i) {
-    slides.forEach(s => s.classList.remove("active"));
-    slides[i].classList.add("active");
-    titleEl.textContent = slideData[i].title;
-    linkEl.href = slideData[i].link;
-  }
-
-  document.querySelector(".next").onclick = () => {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-  };
-
-  document.querySelector(".prev").onclick = () => {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
-  };
-
-  setInterval(() => {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-  }, 5000);
-
-  showSlide(0);
-</script>
 
 </body>
 </html>
