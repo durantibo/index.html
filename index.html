@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
@@ -47,7 +49,9 @@
       font-weight: 500;
     }
 
-    nav a:hover { color: #1a73e8; }
+    nav a:hover {
+      color: #1a73e8;
+    }
 
     section {
       max-width: 960px;
@@ -64,13 +68,19 @@
       background: #111;
     }
 
-    a { color: #1a73e8; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     /* ================= Hero ================= */
     .hero {
       width: 100%;
-      min-height: 420px;
+      min-height: 450px;
       background-image: url('cover_page_polymer.jpg');
       background-size: contain;
       background-repeat: no-repeat;
@@ -84,21 +94,21 @@
     .open-positions-box {
       position: absolute;
       right: 5%;
-      top: 20%;
+      top: 10%; /* moved higher */
       max-width: 42%;
       padding: 20px 25px;
-      background: rgba(255, 215, 0, 0.2); /* light gold */
+      background: rgba(255, 255, 255, 0.15); /* white box */
       border-radius: 10px;
-      border: 1px solid #ffd700; /* gold border */
+      border: 1px solid #fff; /* white border */
       font-family: "Georgia", "Times New Roman", serif;
-      color: #ffd700;
+      color: #fff;
     }
 
     .open-positions-box h3 {
       margin: 0 0 10px;
       font-size: 1.5em;
       letter-spacing: 1px;
-      color: #ffd700;
+      color: #fff;
     }
 
     .open-positions-box ul {
@@ -114,10 +124,10 @@
     .hero .quote-container {
       position: absolute;
       right: 5%;
-      top: 55%;
+      top: 50%; /* lowered quote to prevent overlap */
       max-width: 40%;
       padding: 15px 20px;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       border-radius: 8px;
       font-style: italic;
       font-size: 1.2em;
@@ -185,7 +195,9 @@
       justify-content: center;
     }
 
-    .slide.active { opacity: 1; }
+    .slide.active {
+      opacity: 1;
+    }
 
     .slide img {
       width: 100%;
@@ -197,7 +209,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       color: #fff;
       border: none;
       font-size: 28px;
@@ -206,10 +218,17 @@
       border-radius: 50%;
     }
 
-    .nav:hover { background: rgba(0,0,0,0.8); }
+    .nav:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
 
-    .prev { left: 15px; }
-    .next { right: 15px; }
+    .prev {
+      left: 15px;
+    }
+
+    .next {
+      right: 15px;
+    }
 
     .slide-caption {
       text-align: center;
@@ -224,12 +243,14 @@
       margin-bottom: 6px;
     }
 
-    .slide-caption a { font-size: 0.9em; }
+    .slide-caption a {
+      font-size: 0.9em;
+    }
 
     /* ================= Responsive ================= */
     @media (max-width: 768px) {
       .hero {
-        min-height: 350px;
+        min-height: 400px;
         background-size: cover;
         background-position: center;
         padding-bottom: 160px;
@@ -249,9 +270,13 @@
         align-items: center;
       }
 
-      .about-content p { text-align: center; }
+      .about-content p {
+        text-align: center;
+      }
 
-      .slideshow { height: 280px; }
+      .slideshow {
+        height: 280px;
+      }
     }
   </style>
 </head>
@@ -275,7 +300,7 @@
 <!-- ================= Hero ================= -->
 <section class="hero">
 
-  <div class="open-positions-box">
+  <div class="open-positions-box" id="OpenPositions">
     <h3>Open Positions</h3>
     <ul>
       <li>Recruiting Ph.D. students, postdocs, and visiting scholars.</li>
@@ -387,52 +412,23 @@ const titleEl = document.getElementById("slideTitle");
 const linkEl = document.getElementById("slideLink");
 
 const slideData = [
-  {
-    title: "Manufacturing process of liposomal Formation: A coarse-grained molecular dynamics simulation",
-    link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324005222"
-  },
-  {
-    title: "Exploring Latent Space for Generating Peptide Analogs Using Protein Language Models",
-    link: "https://ieeexplore.ieee.org/document/10821777"
-  },
-  {
-    title: "Head-to-head comparison of in vitro and in vivo efficacy of pHLIP-conjugated anti-seed gamma peptide nucleic acids",
-    link: "https://linkinghub.elsevier.com/retrieve/pii/S2666386423003922"
-  },
-  {
-    title: "Studying the ssDNA loaded adeno-associated virus aggregation using coarse-grained molecular dynamics simulations",
-    link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324002199?via%3Dihub"
-  },
-  {
-    title: "Molecular Dynamics Modeling Based Investigation of the Effect of Freezing Rate on Lysozyme Stability",
-    link: "https://link.springer.com/article/10.1007/s11095-022-03358-z"
-  }
+  { title: "Manufacturing process of liposomal Formation: A coarse-grained molecular dynamics simulation", link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324005222" },
+  { title: "Exploring Latent Space for Generating Peptide Analogs Using Protein Language Models", link: "https://ieeexplore.ieee.org/document/10821777" },
+  { title: "Head-to-head comparison of in vitro and in vivo efficacy of pHLIP-conjugated anti-seed gamma peptide nucleic acids", link: "https://linkinghub.elsevier.com/retrieve/pii/S2666386423003922" },
+  { title: "Studying the ssDNA loaded adeno-associated virus aggregation using coarse-grained molecular dynamics simulations", link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324002199?via%3Dihub" },
+  { title: "Molecular Dynamics Modeling Based Investigation of the Effect of Freezing Rate on Lysozyme Stability", link: "https://link.springer.com/article/10.1007/s11095-022-03358-z" }
 ];
 
 let index = 0;
-
 function showSlide(i) {
   slides.forEach(s => s.classList.remove("active"));
   slides[i].classList.add("active");
   titleEl.textContent = slideData[i].title;
   linkEl.href = slideData[i].link;
 }
-
-document.querySelector(".next").onclick = () => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-};
-
-document.querySelector(".prev").onclick = () => {
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
-};
-
-setInterval(() => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-}, 5000);
-
+document.querySelector(".next").onclick = () => { index = (index + 1) % slides.length; showSlide(index); };
+document.querySelector(".prev").onclick = () => { index = (index - 1 + slides.length) % slides.length; showSlide(index); };
+setInterval(() => { index = (index + 1) % slides.length; showSlide(index); }, 5000);
 showSlide(0);
 </script>
 
