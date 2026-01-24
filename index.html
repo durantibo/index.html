@@ -3,14 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LC44ET8MV0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LC44ET8MV0');
+  </script>
+
   <title>Duran Computational Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
       margin: 0;
@@ -19,7 +26,6 @@
       background: #000;
     }
 
-    /* ================= Header ================= */
     header {
       position: fixed;
       top: 0;
@@ -49,9 +55,7 @@
       font-weight: 500;
     }
 
-    nav a:hover {
-      color: #1a73e8;
-    }
+    nav a:hover { color: #1a73e8; }
 
     section {
       max-width: 960px;
@@ -68,16 +72,9 @@
       background: #111;
     }
 
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
+    a { color: #1a73e8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* ================= Hero ================= */
     .hero {
       width: 100%;
       min-height: 450px;
@@ -90,96 +87,49 @@
       position: relative;
     }
 
-    /* Open Positions Box */
     .open-positions-box {
       position: absolute;
       right: 5%;
-      top: 5%; /* pushed further up */
+      top: 5%;
       max-width: 42%;
       padding: 20px 25px;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255,255,255,0.15);
       border-radius: 10px;
       border: 1px solid #fff;
-      font-family: "Georgia", "Times New Roman", serif;
+      font-family: Georgia, serif;
       color: #fff;
-    }
-
-    .open-positions-box h3 {
-      margin: 0 0 10px;
-      font-size: 1.5em;
-      letter-spacing: 1px;
-      color: #fff;
-    }
-
-    .open-positions-box ul {
-      margin: 0;
-      padding-left: 20px;
-      font-size: 1.05em;
-    }
-
-    .open-positions-box li {
-      margin-bottom: 6px;
     }
 
     .hero .quote-container {
       position: absolute;
       right: 5%;
-      top: 55%; /* quote stays below Open Positions */
+      top: 55%;
       max-width: 40%;
       padding: 15px 20px;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0,0,0,0.5);
       border-radius: 8px;
       font-style: italic;
       font-size: 1.2em;
     }
 
-    .hero .figure-caption {
-      position: absolute;
-      left: 20px;
-      bottom: -45px;
-      max-width: 600px;
-      font-family: "Georgia", "Times New Roman", serif;
-      line-height: 1.4;
-    }
-
-    .figure-caption .figure-title {
-      font-size: 0.55em;
-      font-weight: 600;
-      color: #e0e0e0;
-      margin-bottom: 6px;
-    }
-
-    .figure-caption .figure-link {
-      font-size: 0.55em;
-      color: #1a73e8;
-    }
-
-    /* ================= About ================= */
     .about-content {
       display: flex;
-      align-items: flex-start;
       gap: 20px;
       flex-wrap: wrap;
+      align-items: flex-start;
     }
 
     .about-content img {
       width: 180px;
       border-radius: 50%;
       border: 3px solid #fff;
-      flex-shrink: 0;
     }
 
-    .about-content p {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    /* ================= Slideshow ================= */
     .slideshow {
       position: relative;
       max-width: 800px;
       height: 420px;
-      margin: 35px auto 12px;
+      margin: 35px auto;
       overflow: hidden;
       background: #111;
       border-radius: 10px;
@@ -189,15 +139,13 @@
       position: absolute;
       inset: 0;
       opacity: 0;
-      transition: opacity 0.8s ease-in-out;
+      transition: opacity 0.8s;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .slide.active {
-      opacity: 1;
-    }
+    .slide.active { opacity: 1; }
 
     .slide img {
       width: 100%;
@@ -209,7 +157,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0,0,0,0.5);
       color: #fff;
       border: none;
       font-size: 28px;
@@ -218,66 +166,8 @@
       border-radius: 50%;
     }
 
-    .nav:hover {
-      background: rgba(0, 0, 0, 0.8);
-    }
-
-    .prev {
-      left: 15px;
-    }
-
-    .next {
-      right: 15px;
-    }
-
-    .slide-caption {
-      text-align: center;
-      margin-top: 10px;
-      font-family: "Georgia", "Times New Roman", serif;
-    }
-
-    .slide-caption .title {
-      font-size: 1em;
-      font-weight: 600;
-      color: #eaeaea;
-      margin-bottom: 6px;
-    }
-
-    .slide-caption a {
-      font-size: 0.9em;
-    }
-
-    /* ================= Responsive ================= */
-    @media (max-width: 768px) {
-      .hero {
-        min-height: 400px;
-        background-size: cover;
-        background-position: center;
-        padding-bottom: 160px;
-      }
-
-      .open-positions-box,
-      .hero .quote-container,
-      .hero .figure-caption {
-        position: static;
-        margin-top: 20px;
-        max-width: 100%;
-        text-align: center;
-      }
-
-      .about-content {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .about-content p {
-        text-align: center;
-      }
-
-      .slideshow {
-        height: 280px;
-      }
-    }
+    .prev { left: 15px; }
+    .next { right: 15px; }
   </style>
 </head>
 
@@ -297,63 +187,34 @@
   </nav>
 </header>
 
-<!-- ================= Hero ================= -->
 <section class="hero">
-
   <div class="open-positions-box" id="OpenPositions">
     <h3>Open Positions</h3>
     <ul>
-      <li>Seeking Ph.D. students, postdoc and visiting scientists from diverse backgrounds.</li>
-      <li>Require to have experience in AI/ML, programming and Linux/Unix command-line and HPC clusters.</li>
-      <li>Interested candidates should send the CV to Dr. Tibo Duran at <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a></li>
+      <li>Seeking Ph.D. students, postdoc and visiting scientists.</li>
+      <li>Experience in AI/ML, programming, Linux/Unix, HPC.</li>
+      <li>Email: <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a></li>
     </ul>
   </div>
 
   <div class="quote-container">
-    "It's supposed to be hard. If it wasn't hard, everyone would do it.
-    The hard is what makes it great," — A League of Their Own
-  </div>
-
-  <div class="figure-caption">
-    <div class="figure-title">
-      Coarse-Grained Molecular Dynamics Simulations of Paclitaxel-Loaded Polymeric Micelles
-    </div>
-    <div class="figure-link">
-      <a href="https://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.1c00800" target="_blank">
-        Read more from here about this research work
-      </a>
-    </div>
+    "It's supposed to be hard. If it wasn't hard, everyone would do it."
   </div>
 </section>
 
-<!-- ================= About ================= -->
 <section id="about">
   <div class="about-content">
     <p>
-      I am a faculty member in the Department of Microbiology and Plant Pathology
-      at the University of California, Riverside. My research integrates artificial
-      intelligence, machine learning (AI/ML), and nano-scale molecular modeling to
-      investigate disease mechanisms and advance bioinformatics analyses.
+      Faculty in Microbiology and Plant Pathology at UCR integrating AI/ML and molecular modeling.
       <br><br>
-      Faculty page:
-      <a href="https://profiles.ucr.edu/app/home/profile/fnud" target="_blank">
-        UCR Faculty Profile
-      </a>
+      <a href="https://profiles.ucr.edu/app/home/profile/fnud" target="_blank">UCR Profile</a>
     </p>
-    <img src="profile.png" alt="Tibo Duran">
+    <img src="profile.png">
   </div>
 </section>
 
-<!-- ================= Research ================= -->
 <section id="research">
   <h2>Research</h2>
-  <ul>
-    <li>AI/machine learning in agriculture to model and forecast plant diseases</li>
-    <li>Computational modeling and molecular dynamics (MD) simulations of complex biological systems</li>
-    <li>Integrate data-driven and physics-based approaches to study disease mechanisms, risk prediction, and therapy development</li>
-    <li>Interdisciplinary research spanning agriculture and plant pathology, biopharmaceutical and pharmaceutical sciences, biophysics, and chemical engineering</li>
-  </ul>
-
   <div class="slideshow">
     <div class="slide active"><img src="liposome.JPG"></div>
     <div class="slide"><img src="peptide_pr.JPG"></div>
@@ -363,74 +224,39 @@
     <button class="nav prev">&#10094;</button>
     <button class="nav next">&#10095;</button>
   </div>
-
-  <div class="slide-caption">
-    <div class="title" id="slideTitle"></div>
-    <a id="slideLink" target="_blank">Read more about this research</a>
-  </div>
 </section>
 
-<!-- ================= Publications ================= -->
 <section id="publications">
   <h2>Publications</h2>
-  <p>
-    A full list of publications is available on
-    <a href="https://scholar.google.com/citations?hl=en&user=Hz75fXcAAAAJ" target="_blank">
-      Google Scholar
-    </a>.
-  </p>
+  <a href="https://scholar.google.com/citations?hl=en&user=Hz75fXcAAAAJ" target="_blank">Google Scholar</a>
 </section>
 
-<!-- ================= Teaching ================= -->
 <section id="teaching">
   <h2>Teaching</h2>
   <ul>
-    <li>Computer-Aided Drug Design and Development (Spring 2025)</li>
-    <li>Novel Drug Delivery System (Spring 2025)</li>
-    <li>Pharmacokinetics (Summer 2025)</li>
-    <li>Pharmaceutics (Fall 2025)</li>
+    <li>Computer-Aided Drug Design</li>
+    <li>Novel Drug Delivery</li>
+    <li>Pharmacokinetics</li>
   </ul>
 </section>
 
-<!-- ================= Contact ================= -->
 <section id="contact">
   <h2>Contact</h2>
-  <p>
-    <a href="https://www.linkedin.com/in/tibo-d-33589b6b/" target="_blank">Tibo Duran Linked Profile</a><br>
-    <a href="https://www.researchgate.net/search?q=tibo+duran" target="_blank">Tibo Duran ResearchGate Profile</a><br>
-    Email: <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a><br>
-    GitHub: <a href="https://github.com/durantibo">github.com/durantibo</a><br>
-  </p>
+  Email: <a href="mailto:tibo.duran@ucr.edu">tibo.duran@ucr.edu</a>
 </section>
 
-<footer>
-  © 2026 Tibo Duran
-</footer>
+<footer>© 2026 Tibo Duran</footer>
 
 <script>
 const slides = document.querySelectorAll(".slide");
-const titleEl = document.getElementById("slideTitle");
-const linkEl = document.getElementById("slideLink");
-
-const slideData = [
-  { title: "Manufacturing process of liposomal Formation: A coarse-grained molecular dynamics simulation", link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324005222" },
-  { title: "Exploring Latent Space for Generating Peptide Analogs Using Protein Language Models", link: "https://ieeexplore.ieee.org/document/10821777" },
-  { title: "Head-to-head comparison of in vitro and in vivo efficacy of pHLIP-conjugated anti-seed gamma peptide nucleic acids", link: "https://linkinghub.elsevier.com/retrieve/pii/S2666386423003922" },
-  { title: "Studying the ssDNA loaded adeno-associated virus aggregation using coarse-grained molecular dynamics simulations", link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517324002199?via%3Dihub" },
-  { title: "Molecular Dynamics Modeling Based Investigation of the Effect of Freezing Rate on Lysozyme Stability", link: "https://link.springer.com/article/10.1007/s11095-022-03358-z" }
-];
-
 let index = 0;
-function showSlide(i) {
-  slides.forEach(s => s.classList.remove("active"));
+function showSlide(i){
+  slides.forEach(s=>s.classList.remove("active"));
   slides[i].classList.add("active");
-  titleEl.textContent = slideData[i].title;
-  linkEl.href = slideData[i].link;
 }
-document.querySelector(".next").onclick = () => { index = (index + 1) % slides.length; showSlide(index); };
-document.querySelector(".prev").onclick = () => { index = (index - 1 + slides.length) % slides.length; showSlide(index); };
-setInterval(() => { index = (index + 1) % slides.length; showSlide(index); }, 5000);
-showSlide(0);
+document.querySelector(".next").onclick=()=>{index=(index+1)%slides.length;showSlide(index);}
+document.querySelector(".prev").onclick=()=>{index=(index-1+slides.length)%slides.length;showSlide(index);}
+setInterval(()=>{index=(index+1)%slides.length;showSlide(index);},5000);
 </script>
 
 </body>
