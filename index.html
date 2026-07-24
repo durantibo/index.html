@@ -184,6 +184,45 @@
       min-width: 250px;
     }
 
+    /* ================= People ================= */
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .person-card {
+      text-align: center;
+      background: #111;
+      border: 1px solid #444;
+      border-radius: 12px;
+      padding: 24px 16px;
+      color: #fff;
+    }
+
+    .person-card img {
+      width: 135px;
+      height: 135px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 14px;
+      background: #222;
+    }
+
+    .person-card h3 {
+      margin: 8px 0 5px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .person-card p {
+      margin: 4px 0;
+      color: #ccc;
+      font-size: 0.95em;
+    }
+
     /* ================= Slideshow ================= */
     .slideshow {
       position: relative;
@@ -299,6 +338,7 @@
     <div>
       <a href="#about">About</a>
       <a href="#research">Research</a>
+      <a href="#people">People</a>
       <a href="#publications">Publications</a>
       <a href="#teaching">Teaching</a>
       <a href="#OpenPositions">Open Positions</a>
@@ -377,6 +417,43 @@
   <div class="slide-caption">
     <div class="title" id="slideTitle"></div>
     <a id="slideLink" target="_blank">Read more about this research</a>
+  </div>
+</section>
+
+<!-- ================= People ================= -->
+<section id="people">
+  <h2>People</h2>
+
+  <div class="people-grid">
+
+    <div class="person-card">
+      <img src="people/tibo_duran.jpg" alt="Tibo Duran">
+      <h3>Tibo Duran</h3>
+      <p>Assistant Professor</p>
+      <p>University of California, Riverside</p>
+    </div>
+
+    <div class="person-card">
+      <img src="people/person1.jpg" alt="Person 1">
+      <h3>Name</h3>
+      <p>Position</p>
+      <p>University</p>
+    </div>
+
+    <div class="person-card">
+      <img src="people/person2.jpg" alt="Person 2">
+      <h3>Name</h3>
+      <p>Position</p>
+      <p>University</p>
+    </div>
+
+    <div class="person-card">
+      <img src="people/person3.jpg" alt="Person 3">
+      <h3>Name</h3>
+      <p>Position</p>
+      <p>University</p>
+    </div>
+
   </div>
 </section>
 
