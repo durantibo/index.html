@@ -131,16 +131,32 @@
       margin-bottom: 6px;
     }
 
-    .hero .quote-container {
+    /* Lab News Box (Replaced Quote Container) */
+    .hero .news-container {
       position: absolute;
       right: 5%;
       top: 55%;
-      max-width: 40%;
-      padding: 15px 20px;
-      background: rgba(0, 0, 0, 0.5);
+      max-width: 42%;
+      padding: 16px 20px;
+      background: rgba(26, 115, 232, 0.15);
+      border: 1px solid #1a73e8;
       border-radius: 8px;
-      font-style: italic;
-      font-size: 1.2em;
+      color: #fff;
+    }
+
+    .hero .news-tag {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #64b5f6;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .hero .news-container p {
+      margin: 0;
+      font-size: 1.05em;
+      line-height: 1.45;
     }
 
     .hero .figure-caption {
@@ -306,7 +322,7 @@
       }
 
       .open-positions-box,
-      .hero .quote-container,
+      .hero .news-container,
       .hero .figure-caption {
         position: static;
         margin-top: 20px;
@@ -359,9 +375,9 @@
     </ul>
   </div>
 
-  <div class="quote-container">
-    "It's supposed to be hard. If it wasn't hard, everyone would do it.
-    The hard is what makes it great," — A League of Their Own
+  <div class="news-container">
+    <div class="news-tag">📢 Recent Lab News</div>
+    <p>🎉 Our lab is honored to receive the <strong>2026 City of Hope - UCR Biomedical Research Initiative (CUBRI) Award!</strong></p>
   </div>
 
   <div class="figure-caption">
